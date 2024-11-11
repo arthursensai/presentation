@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-image: url('simple.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.side-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.card {
+    padding: 2%;
+    border-radius: 10px;
+    width: 150px;
+    height: 175px;
+    transition: all 1s ease-out;
+    animation: bottomToTop 4s ease-out forwards;
+    color: white;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.card:hover {
+    padding: 3%;
+    cursor: pointer;
+}
+
+.icon {
+    height: 50%;
+    width: 100%;
+}
+
+.coding-card {
+    background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+}
+
+.cooking-card {
+    background: linear-gradient(135deg, #FF6347, #FFD700);
+}
+
+.drawing-card {
+    background: linear-gradient(135deg, #FF69B4, #1E90FF);
+}
+
+.kickboxing-card {
+    background: linear-gradient(135deg, #FF4500, #000000);
+}
+
+.coding-title {
+    font-family: Modern;
+}
+
+.cooking-title {
+    font-family: 'lemon Jelly';
+    font-size: 50px;
+}
+
+.drawing-title {
+    font-family: Macon;
+}
+
+.kickboxing-title {
+    font-family: facon;
+}
+
+.data {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.code {
+    width: 20%;
+}
+
+.drawings-container {
+    columns: 300px;
+}
+
+.drawing {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    margin-bottom: 1em;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+.drawing:hover {
+    cursor: pointer;
+}
+
+.dev-container {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 420px;
+    padding: 2%;
+}
+
+.dev-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 30%;
+    height: 450px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    font-size: 50px;
+    font-family: Modern;
+    cursor: pointer;
+}
+
+.frontEnd-icons,
+.backEnd-icons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.dev-icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+}
+
+.kitchen-container {
+    display: flex;
+    flex-direction: row;
+    height: 420px;
+}
+
+@keyframes devCardColors {
+    50% {
+        filter: hue-rotate(350deg);
+    }
+}
+
+@keyframes bottomToTop {
+    0% {
+        transform: translateY(100%);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+        opacity: 0;
+    }
+    25% {
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+        opacity: 0.25;
+    }
+    50% {
+        box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.5);
+        opacity: 0.5;
+    }
+    75% {
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: Modern;
+    src: url(Orbitron.ttf);
+}
+
+@font-face {
+    font-family: lemon jelly;
+    src: url('Lemon Jelly.ttf');
+}
+
+@font-face {
+    font-family: Facon;
+    src: url('Facon.ttf');
+}
+
+@font-face {
+    font-family: Macon;
+    src: url('Macon.otf');
+}
